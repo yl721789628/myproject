@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html{font-size:20px;}
+		div{background-color:red;width: 10rem;height:10rem;}
+
+	</style>
+</head>
+<body>
+	<div></div>
+	<script>
+	var html = document.getElementsByTagName('html')[0];
+	var pageWidth = html.getBoundingClientRect().width
+	console.log(pageWidth)
+
+
+	</script>
+</body>
+</html>

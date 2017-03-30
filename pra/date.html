@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var date = new Date();
+		var y = date.getFullYear()
+		var m = date.getMonth()
+		var d = date.getDate()
+		var x = date.getDay()
+		var h =date.getHours()
+		var m =date.getMinutes()
+		var s =date.getSeconds()
+		function two(num){
+			if(num<10){
+				return '0'+num;
+			}else{
+				return num;
+			}
+		}
+		document.write(y+'年'+two(m)+'月'+two(d)+'日'+h+':'+two(m)+':'+two(s))
+
+
+
+	</script>
+</body>
+</html>

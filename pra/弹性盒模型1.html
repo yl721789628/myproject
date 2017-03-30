@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width:800px;
+			height:500px;
+			border:10px solid pink;
+			display:flex;
+			flex-direction:row;
+			justify-content:space-between;
+			align-items:flex-end;
+			flex-wrap:wrap;
+			align-content:flex-start; 
+			display:flex;
+		}
+		/*row：从左向右*/
+		/*row-reverse从右向左显示*/
+		/*column从上到下排列*/
+		/*column-reverse从下到上排列*/
+		/*justify-content:
+		flex-end内容区域靠右显示/flex-start内容区域靠左显示/center内容区域居中显示
+		space-between分散居中
+		space-around元素平均分配元素左右两边*/
+		/*align-items:
+		flex-end侧轴靠下显示
+		flex-start靠上方显示
+		center靠中间显示
+		*/
+		/*flex-wrap：wrap换行*/
+		/*flex-wrap：wrap-reverse换行*/
+		/*align-content:
+		flex-start处理了换行元素之间的间隙
+		flex-end改变了侧轴的方向并且处理了换行元素之间的间隙
+		center处理了换行元素之间的间隙并在侧轴方向居中
+		space-between平均分配空隙
+		space-around平均分配换行元素的空隙*/
+		/*flex-flow：column nowrap*/
+
+		.box .item{
+			width:80px;
+			height:80px;
+			float:left;
+			background-color: yellow;
+			border:1px solid black; 
+			margin:auto;
+			/*box-sizing: border-box;*/
+		}
+		/*将1显示到8的后面，order只要大于8就可以了order支持负数*/
+		.box .item:nth-of-type(1){
+			/*flex:1;*/
+			/*order:9;*/
+			align-self:flex-start;
+		}
+		.box .item:nth-of-type(2){
+			/*flex:2;*/
+			/*order:2;*/
+			align-self:flex-end;
+		}
+		.box .item:nth-of-type(3){
+			/*order:3;*/
+			/*flex:3;*/
+			align-self: center;
+		}
+		.box .item:nth-of-type(4){
+			/*order:4;*/
+			flex:4;
+		}
+		.box .item:nth-of-type(5){
+			flex:5;
+			/*order:5;*/
+		}
+		.box .item:nth-of-type(6){
+			flex:6;
+			/*order:6;*/
+		}
+		.box .item:nth-of-type(7){
+			flex:7;
+			/*order:7;*/
+		}
+		.box .item:nth-of-type(8){
+			flex:8;
+			/*order:8;*/
+		}
+		/*flex伸缩性:可以通过flex的值去设置它在容器中所展示的大小的比例*/
+		/*1-8相当于等比分成了36份，flex的值相当于占几份,flex值为1则在整个容器中占1份*/
+		/*align-self子元素侧轴对齐,flex-start/flex-end/center*/
+	/*	margin:auto;
+		display:flex;
+		上下左右都能自动居中*/
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+		<div class="item">6</div>
+		<div class="item">7</div>
+		<div class="item">8</div>
+		<!-- <div class="item">9</div>
+		<div class="item">10</div> -->
+
+	</div>
+</body>
+</html>

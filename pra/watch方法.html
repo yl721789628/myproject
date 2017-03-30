@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="angularjs.js"></script>	
+
+</head>
+<body ng-app="myapp">
+	<div ng-controller="mycontroller">
+		<input type="text" ng-model="name">
+			数据改变的次数:<p>{{count}}</p>
+
+
+	</div>
+	<script>
+		var myapp = angular.module('myapp',[]);
+		myapp.controller('mycontroller',function($scope){
+			$scope.count=0;
+			
+			$scope.$watch('name',function(newValue,oldValue,scope){
+				console.log(newValue)
+				console.log(oldValue)
+				console.log(scope)
+				$scope.count+=1;
+
+			})
+		})
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl">
+		数量：<input type="text" ng-model="qua">
+		单价：<input type="text" ng-model="pri">
+
+		<p>{{(qua * pri) | currency}}</p>
+	</div>
+	<script>
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.qua=0;
+			$scope.pri=0;
+		})
+
+
+
+
+	</script>
+</body>
+</html>

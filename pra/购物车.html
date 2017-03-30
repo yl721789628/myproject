@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#title{color:green;font-weight:bold;}
+		tr{height:40px;text-align:center;}
+		td{border-top:1px solid #CCC;}
+		table input{width:80px;}
+	</style>
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" width="900">
+		<tr id="title">
+			<td>产品名称</td>
+			<td>单价</td>
+			<td>数量</td>
+			<td>总价</td>
+		</tr>
+		<tbody id="list">
+		</tbody>
+
+	</table>
+	<script type="text/javascript">
+		var list = document.getElementById('list');
+		var goodsList=[
+		{name:'小米手机',price:2800,num:2},
+		{name:'三星手机',price:3800,num:2},
+		{name:'华为手机',price:2000,num:2},
+		{name:'oppo手机',price:2800,num:2}]
+		function list(){
+			var html='';
+			for(var i=0;i<goodsList.length;i++){
+			html+='<tr>'+
+			'<td>'+goodsList[i].name+'</td>'+
+			'<td>'+goodsList[i].price+'</td>'+
+			'<td><button onclick="change('+i+',-1)">-</button><input type="" name="" value="'+goodsList[i].num+'"><button onclick="change('+i+',1)">+</button></td>'+
+			'</tr>'
+			}
+			list.innerHTML=html;
+		}
+		
+		function change(i,num){
+			goodsList[i].num+=num
+			if(goodsList[i].num<1){
+				goodsList[i].num=1
+			}
+			list()
+		}
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

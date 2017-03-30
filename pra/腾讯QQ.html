@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.js"></script>
+</head>
+<body ng-app="app">
+	<table>
+		<thead>
+			<tr>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>年龄</td>
+			</tr>
+		</thead>
+		<tbody ng-controller="stars">
+			<tr ng-repeat="list in lists">
+				<td>{{list.name}}</td>
+				<td>{{list.sex}}</td>
+				<td>{{list.age}}</td>
+			</tr>
+		</tbody>
+		<div ng-controllor="mycontroller">
+			<h1>{{name}}</h1>
+		</div>
+		<script>
+
+		var demo = angular.module('app',[]);
+		demo.controller('stars',['$scope',function($scope){
+			$scope.list=[
+				{name:'哈哈',sex:'nan',age:19},
+				{name:'哈哈',sex:'nan',age:19},
+				{name:'哈哈',sex:'nan',age:19},
+				{name:'哈哈',sex:'nan',age:19}
+			]
+		}])
+
+		var app = angular.module('app',[]);
+		app.controller('mycontroller',['$scope',function(){
+			$scope.name='itcast';
+
+		}])
+		</script>
+	</table>
+</body>
+</html>
+	
+

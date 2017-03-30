@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">点击更改链接</button>
+	<p id="change"><a href="http://www.badidu.com">百度一下</a></p>
+	<a href=""></a>
+	<script>
+	var btn = document.getElementById('btn')
+	var change = document.getElementById('change')
+	btn.onclick=function(){
+		change.innerHTML = '<a href="http://www.jd.com">京东</a>'
+	}
+
+	</script>
+</body>
+</html>

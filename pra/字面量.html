@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 1.字面量的方式声明对象
+		// var p = {
+		// 	name:"jack",
+		// 	work:function(){
+		// 		alert('working...')
+		// 	},
+		// 	_age:18,
+		// 	get age(){
+		// 		return this._age;
+		// 	},
+		// 	set age(val){
+		// 		if(val>0 && val<150){
+		// 			this._age=val
+		// 		}else{
+		// 			throw new Error('invalid value')
+		// 		}
+		// 	}
+		// }
+
+		// 	console.log(p.name)
+		// 	console.log(p._age);
+		// // 给对象添加多个属性	
+		// Object.defineProperties(p,{
+		// 	salary:{
+		// 		value:1000,
+		// 		witable:false
+		// 	},
+		// 	gender:{
+		// 		value:true
+		// 	}
+		// })
+		// console.log(p.salary)
+		// for(xx in p){
+		// 	alert(xx)
+		// }
+		// 字面量方式创建对象，不能重复用，而工厂模式创建对象可以重复调用(如果有相同的属性）
+		// 2.工厂模式的方法声明对象
+		// function hh(name,age){
+		// 	var obj = new Object();
+		// 	obj.name = name;
+		// 	obj.age = age;
+		// 	obj.run=function(){
+		// 		return this.name+this.age+'运行中'
+		// 	}
+		// 	return obj;
+		// }
+		// var obj1 = hh('jack',18)
+		// // 判断obj1是否在对象Object中,如果在就弹出true否则则弹出false
+		// alert(obj1 instanceof Object)
+		// 
+		function person(){
+			this.name = 'jack',
+			this.age = 18
+		}
+		person.prototype.headCount = 100;
+		var p = new person();
+		var p1 = new person();
+		// console.log(p1.name)
+		// 函数本身就是一个对象，在函数创建的时候就带prototype属性
+		// 实例化的对象具有_proto_属性
+		// _proto_指向的是构造器函数原型属性的那个对象(原型对象)
+		// 
+
+	</script>
+</body>
+</html>

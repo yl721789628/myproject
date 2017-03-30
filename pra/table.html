@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		td{background:pink;border:1px solid gray;}
+
+	</style>
+</head>
+<body>
+	<script>
+	function table(hang,lie,w){
+		if(hang==undefined) hang = 5;
+		if(lie==undefined) lie = 5;
+		document.write('<table width='+w+'">')
+		for(var i=1;i<hang;i++){
+			document.write('<tr>')
+			for(var j=1;j<lie;j++){
+				document.write('<td>')
+				document.write(i+'-'+j)
+				document.write('</td>')
+			}
+			document.write('</tr>')
+		}
+	document.write('</table>')
+	}
+	
+
+	table(5,5)
+
+
+	</script>
+</body>
+</html>

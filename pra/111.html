@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<select name="" onchange="test(this)">
+		<option value="1">北京</option>
+		<option value="2">上海</option>
+		<option value="3">广州</option>
+		<option value="4">深圳</option>
+	</select>
+	
+	<script>
+		var s = document.getElementById('s');
+		// options返回包含下拉列表中的所有选项的一个数组
+		// selectedIndex返回下拉列表被选项目的索引号
+		function test(obj){
+			alert(obj.options[obj.selectedIndex].value)
+			alert(obj.options[obj.selectedIndex].innerHTML)
+		}
+	</script>
+</body>
+</html>

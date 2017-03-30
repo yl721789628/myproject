@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angularjs.js"></script>
+</head>
+<body>
+	<div ng-app="" ng-init="names=[{name:'a',con:'dsd'},{name:'b',con:'wee'},{name:'c',con:'ew'}]">
+		<ul>
+			<li ng-repeat="x    in names">
+				{{x.name + ',' + x.con }}
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
